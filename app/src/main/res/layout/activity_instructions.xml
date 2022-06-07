@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InstructionsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ve_bg1"
+        android:orientation="vertical"></LinearLayout>
+
+    <TextView
+        android:id="@+id/tvwi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Welcome to MTP Chaser Instruction screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="The essence of the application is an attractive and interesting game for all ages, that the population could get more clever and learn from it. The game is questionnaires on various and varied topics. The user should answer as many correct questions as possible out of 10 in a single questionnaire. Each question takes 20 seconds so you have to answer quickly on the one hand, and on the other hand in a considered and intelligent manner. After logging in to the app and reaching the home screen, click on the “Press to start a quiz” button to start a questionnaire. After completing the questionnaire, a screen will appear with your result. From this screen you can switch back to the home screen by pressing the “DONE” button.In addition you can also share your result to friends and family by pressing the “SHARE YOUR SCORE” button. From the home screen you can navigate between the screens. Start a new questionnaire, return to the login screen, go to the instructions screen and so on. "
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvwi" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

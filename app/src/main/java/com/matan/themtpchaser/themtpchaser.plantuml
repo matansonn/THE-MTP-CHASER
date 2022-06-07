@@ -1,0 +1,201 @@
+@startuml
+
+title __THEMTPCHASER's Class Diagram__\n
+
+  namespace com.matan.themtpchaser {
+    class com.matan.themtpchaser.BackgroundMusicService {
+        ~ mp : MediaPlayer
+        + BackgroundMusicService()
+        + onBind()
+        + onDestroy()
+        + onStartCommand()
+    }
+  }
+  
+
+  namespace com.matan.themtpchaser {
+    class com.matan.themtpchaser.BatteryReceiver {
+        ~ tvb : TextView
+        + onReceive()
+        ~ BatteryReceiver()
+    }
+  }
+  
+
+  namespace com.matan.themtpchaser {
+    class com.matan.themtpchaser.HomeActivity {
+        + onCreateOptionsMenu()
+        + onOptionsItemSelected()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.matan.themtpchaser {
+    class com.matan.themtpchaser.InstructionsActivity {
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.matan.themtpchaser {
+    class com.matan.themtpchaser.LoginActivity {
+        ~ tabLayout : TabLayout
+        ~ viewPager : ViewPager
+        - mAuth : FirebaseAuth
+        - tvAni : TextView
+        + login()
+        + signUp()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.matan.themtpchaser {
+    class com.matan.themtpchaser.LoginAdapter {
+        ~ totalTabs : int
+        - context : Context
+        + LoginAdapter()
+        + getCount()
+        + getItem()
+    }
+  }
+  
+
+  namespace com.matan.themtpchaser {
+    class com.matan.themtpchaser.LoginTabFragment {
+        ~ email : EditText
+        ~ login_button : Button
+        ~ pass : EditText
+        ~ valid : boolean
+        - LoginTabFragment : Object
+        - mAuth : FirebaseAuth
+        + checkField()
+        + onCreateView()
+        + onStart()
+    }
+  }
+  
+
+  namespace com.matan.themtpchaser {
+    class com.matan.themtpchaser.MainActivity {
+        ~ tvb : TextView
+        # onCreate()
+        # onStop()
+    }
+  }
+  
+
+  namespace com.matan.themtpchaser {
+    class com.matan.themtpchaser.QuesSuper {
+        ~ question : String
+        + QuesSuper()
+        + QuesSuper()
+        + getQuestion()
+        + setQuestion()
+    }
+  }
+  
+
+  namespace com.matan.themtpchaser {
+    class com.matan.themtpchaser.Question {
+        ~ correctAns : int
+        ~ optionA : String
+        ~ optionB : String
+        ~ optionC : String
+        ~ optionD : String
+        + Question()
+        + Question()
+        + getCorrectAns()
+        + getOptionA()
+        + getOptionB()
+        + getOptionC()
+        + getOptionD()
+        + setCorrectAns()
+        + setOptionA()
+        + setOptionB()
+        + setOptionC()
+        + setOptionD()
+        + toString()
+    }
+  }
+  
+
+  namespace com.matan.themtpchaser {
+    class com.matan.themtpchaser.QuizActivity {
+        ~ nQuestions : int
+        - QUESTIONS : List<Question>
+        - countDown : CountDownTimer
+        - konfettiView : KonfettiView
+        - option1 : Button
+        - option2 : Button
+        - option3 : Button
+        - option4 : Button
+        - qCount : TextView
+        - quesNum : int
+        - question : TextView
+        - questionList : List<Question>
+        - score : int
+        - timer : TextView
+        + onBackPressed()
+        + onClick()
+        + setQuestion()
+        # onCreate()
+        - PlayAnim()
+        - changeQuestion()
+        - checkAnswer()
+        - getQuestionsList()
+        - startTimer()
+    }
+  }
+  
+
+  namespace com.matan.themtpchaser {
+    class com.matan.themtpchaser.ScoreActivity {
+        - done : Button
+        - score : TextView
+        - share : Button
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.matan.themtpchaser {
+    class com.matan.themtpchaser.SignUpTabFragment {
+        ~ emailcon : EditText
+        ~ passcon : EditText
+        ~ signup_button : Button
+        ~ su_email : EditText
+        ~ su_pass : EditText
+        ~ valid : boolean
+        - mAuth : FirebaseAuth
+        + checkFields()
+        + onCreateView()
+    }
+  }
+  
+
+  com.matan.themtpchaser.BackgroundMusicService -up-|> android.app.Service
+  com.matan.themtpchaser.BatteryReceiver -up-|> android.content.BroadcastReceiver
+  com.matan.themtpchaser.HomeActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.matan.themtpchaser.InstructionsActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.matan.themtpchaser.LoginActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.matan.themtpchaser.LoginAdapter -up-|> androidx.fragment.app.FragmentPagerAdapter
+  com.matan.themtpchaser.LoginTabFragment -up-|> androidx.fragment.app.Fragment
+  com.matan.themtpchaser.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.matan.themtpchaser.MainActivity o-- com.matan.themtpchaser.BatteryReceiver : batteryReceiver
+  com.matan.themtpchaser.Question -up-|> com.matan.themtpchaser.QuesSuper
+  com.matan.themtpchaser.QuizActivity .up.|> android.view.View.OnClickListener
+  com.matan.themtpchaser.QuizActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.matan.themtpchaser.ScoreActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.matan.themtpchaser.SignUpTabFragment -up-|> androidx.fragment.app.Fragment
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

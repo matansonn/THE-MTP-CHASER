@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item1"
+        android:title="Exit"/>
+    <item
+        android:id="@+id/item2"
+        android:title="Back to opening page"/>
+    <item
+        android:id="@+id/item3"
+        android:title="To Instruction page"/>
+    <item android:id="@+id/stopmusic"
+        android:title="Stop background music"/>
+    <item android:id="@+id/startmusic"
+        android:title="Start background music"/>
+</menu>

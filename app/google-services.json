@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "769805061957",
+    "project_id": "the-mtp-chaser",
+    "storage_bucket": "the-mtp-chaser.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769805061957:android:c0742be7919ac445bdf82c",
+        "android_client_info": {
+          "package_name": "com.matan.themtpchaser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "769805061957-062bg8kina2dfe2f49hjvm16susngsge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4E967R5RWwjc1LAODQkUX6UdyE3ffqZ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769805061957-062bg8kina2dfe2f49hjvm16susngsge.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
